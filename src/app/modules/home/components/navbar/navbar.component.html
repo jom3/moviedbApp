@@ -2,7 +2,9 @@
   <nav class="w-full h-full flex flex-row justify-between items-center px-10 py-2">
     <a [routerLink]="['/']" routerLinkActive="router-link-active" class="h-full" ><img src="./assets/logo.png" alt="una imagen" class="h-full"></a>
     <ul class="flex flex-row gap-5">
-      <li *ngFor="let nav of navigation"><a routerLink={{nav.route}} routerLinkActive="router-link-active" >{{nav.name}}</a></li>
+      <li *ngFor="let nav of navigation">
+        <a routerLink={{nav.route}} routerLinkActive="router-link-active" class="text-white uppercase font-semibold text-xl hover:border-[#40434E] hover:text-[#40434E] border-b-4 p-2 rounded transition-all duration-200">{{nav.name}}</a>
+      </li>
     </ul>
   </nav>
 </header>
