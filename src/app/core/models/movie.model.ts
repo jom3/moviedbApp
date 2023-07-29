@@ -1,35 +1,35 @@
 export interface MovieResponse {
-    dates:        Dates;
-    page:         number;
-    results:      MoviesData[];
-    totalPages:   number;
-    totalResults: number;
+  dates: Dates;
+  page: number;
+  results: MoviesData[];
+  total_pages: number;
+  total_results: number;
 }
 
 export interface Dates {
-    maximum: Date;
-    minimum: Date;
+  maximum: Date;
+  minimum: Date;
 }
 
 export interface MoviesData {
-    adult:            boolean;
-    backdropPath:     string;
-    genreIDS:         number[];
-    id:               number;
-    originalLanguage: OriginalLanguage;
-    originalTitle:    string;
-    overview:         string;
-    popularity:       number;
-    posterPath:       string;
-    releaseDate:      Date;
-    title:            string;
-    video:            boolean;
-    voteAverage:      number;
-    voteCount:        number;
+  adult: boolean;
+  backdrop_path: string;
+  genre_ids: number[];
+  id: number;
+  original_language: OriginalLanguage;
+  original_title: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  release_date: Date;
+  title: string;
+  video: boolean;
+  vote_average: number;
+  vote_count: number;
 }
 
 export enum OriginalLanguage {
-    En = "en",
-    Ja = "ja",
-    Uk = "uk",
+  En = 'en',
+  Ja = 'ja',
+  Uk = 'uk',
 }
