@@ -1,0 +1,39 @@
+<div class="bg-red-950 text-red-300 rounded uppercase fixed w-80 p-5 top-20 right-20 border-2 border-red-700 border-double" *ngIf="hasError()">
+  Ingrese al menos un caracter para ayudarle en su busqueda
+</div>
+<div class="flex flex-col gap-10">
+  <section id="search" class="w-full px-10 rounded outline-none flex flex-col gap-5 py-10">
+    <h1 class="text-2xl uppercase text-white font-semibold">Millones de películas, programas de televisión y personas por descubrir. Explora ahora.</h1>
+    <form class="w-full h-full flex flex-row gap-3" (submit)="search()" [formGroup]="searchForm">
+      <input type="text" placeholder="Busque una pelicula, serie, etc." class="bg-gray-700 w-full px-10 py-3 roundzed caret-gray-100 text-white uppercase font-semibold" formControlName="searchInput">
+      <button type="submit" class="p-2 bg-blue-950 text-white uppercase font-semibold rounded-full hover:bg-blue-800">Buscar</button>
+    </form>
+  </section>
+  <section id="upcomingMovies" class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Proximas peliculas</p>
+  <div *ngFor="let mov of UpcomingMovies()" class="w-full h-full">
+    <app-movie-card [data]="mov"></app-movie-card>
+  </div>
+</section>
+
+<section id="popularMovies" class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+  <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Peliculas populares</p>
+  <div *ngFor="let mov of PopularMovies()" class="w-full h-full">
+    <app-movie-card [data]="mov"></app-movie-card>
+  </div>
+</section>
+
+<section id="airTvShow" class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+  <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series al aire</p>
+  <div *ngFor="let serie of OnTheAirTvShow()" class="w-full h-full">
+    <app-serie-card [data]="serie"></app-serie-card>
+  </div>
+</section>
+
+<section id="popularTvShow" class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+  <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series populares</p>
+  <div *ngFor="let serie of PopularTvShow()" class="w-full h-full">
+    <app-serie-card [data]="serie"></app-serie-card>
+  </div>
+</section>
+</div>
