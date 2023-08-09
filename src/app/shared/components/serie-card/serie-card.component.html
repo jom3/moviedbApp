@@ -1,1 +1,9 @@
-<p>serie-card works!</p>
+<div class="h-full min-w-[15rem] bg-red-400 rounded relative" >
+  <a [routerLink]="['/serie', data.id]" routerLinkActive="router-link-active"><img src={{getImage(data.poster_path)}} alt="" class="w-full h-full object-contain relative"></a>
+  <div class="w-10 h-10 bg-red-600 rounded-full flex justify-center items-center absolute top-2 right-3 ">
+    <p class=" text-yellow-300  font-semibold bg-transparent">{{data.vote_average}}</p>
+  </div>
+  <div class="bg-black w-full h-28 absolute bottom-0 opacity-70 px-10 overflow-hidden flex justify-center items-center">
+    <p class="text-yellow-300 font-semibold uppercase text-center bg-transparent overflow-hidden">{{data.name}}</p>
+  </div>
+</div>
