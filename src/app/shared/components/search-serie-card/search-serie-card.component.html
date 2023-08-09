@@ -1,0 +1,8 @@
+<div class="w-full h-52 border-2 border-double border-white flex flex-row gap-5" *ngIf="data.poster_path!=null">
+  <img src={{getImage(data.poster_path)}} alt="una imagen">
+  <div class="w-full flex flex-col justify-center gap-3">
+    <a class="text-white uppercase font-semibold text-xl hover:text-blue-600" [routerLink]="['/serie', data.id]" routerLinkActive="router-link-active" >{{data.name}}</a>
+    <h2 class="text-gray-600">{{data.first_air_date}}</h2>
+    <p class="text-gray-400 overflow-hidden p-2">{{data.overview}}</p>
+  </div>
+</div>
