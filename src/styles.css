@@ -6,3 +6,21 @@
 *{
   background-color: #0E1116;
 }
+
+.mostrador::-webkit-scrollbar{
+  height: 10px;
+}
+.mostrador::-webkit-scrollbar-track{
+  background: #888;
+  border-radius: 100px;
+}
+
+.mostrador::-webkit-scrollbar-thumb {
+  background: #313844;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+.mostrador::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
