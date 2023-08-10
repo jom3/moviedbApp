@@ -1,0 +1,13 @@
+<div class="relative w-full h-full flex justify-between items-start">
+    <img src={{getBackImage(movie().backdrop_path)}} alt="una imagen" class="w-full h-96 object-cover opacity-20">
+    <div class="text-white fixed top-56 left-20 flex flex-row gap-20 bg-transparent">
+    <img src={{getFrontImage(movie().poster_path)}} alt="" class="w-64 rounded-xl">
+      <div class="flex flex-col gap-5 justify-center items-start w-96 bg-transparent">
+        <h1 class="text-white uppercase bg-transparent">{{movie().title}}</h1>
+        <h2 class="text-white uppercase bg-transparent">{{movie().release_date}}</h2>
+        <h2 class="text-white uppercase bg-transparent">{{movie().popularity}}</h2>
+        <h2 class="text-white uppercase bg-transparent">{{movie().overview}}</h2>
+        <h2 class="text-white uppercase bg-transparent">"{{movie().tagline}}"</h2>
+      </div>
+    </div>
+</div>
