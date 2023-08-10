@@ -1,1 +1,32 @@
-<p>peliculas works!</p>
+<div class="w-full flex flex-col gap-10 mt-5">
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Peliculas en teatros</p>
+    <div *ngFor="let mov of NowPlayingMovies()" class="w-full h-full">
+      <app-movie-card [data]="mov"></app-movie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Peliculas populares</p>
+    <div *ngFor="let mov of PopularMovies()" class="w-full h-full">
+      <app-movie-card [data]="mov"></app-movie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Peliculas top</p>
+    <div *ngFor="let mov of TopRatedMovies()" class="w-full h-full">
+      <app-movie-card [data]="mov"></app-movie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Proximas peliculas</p>
+    <div *ngFor="let mov of UpcomingMovies()" class="w-full h-full">
+      <app-movie-card [data]="mov"></app-movie-card>
+    </div>
+  </section>
+
+</div>
+
