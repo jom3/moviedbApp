@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SeriesRoutingModule } from './series-routing.module';
 import { SeriesComponent } from './pages/series/series.component';
 import { SerieComponent } from './pages/serie/serie.component';
+import { SerieCardComponent } from 'src/app/shared/components/serie-card/serie-card.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SerieComponent } from './pages/serie/serie.component';
   ],
   imports: [
     CommonModule,
-    SeriesRoutingModule
+    SeriesRoutingModule,
+    SerieCardComponent
   ]
 })
 export class SeriesModule { }
