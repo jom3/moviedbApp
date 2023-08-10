@@ -1,1 +1,31 @@
-<p>series works!</p>
+<div class="w-full flex flex-col gap-10 mt-5">
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series disponibles</p>
+    <div *ngFor="let mov of AiringTodayTvShow()" class="w-full h-full">
+      <app-serie-card [data]="mov"></app-serie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series al aire</p>
+    <div *ngFor="let mov of OnTheAirTvShow()" class="w-full h-full">
+      <app-serie-card [data]="mov"></app-serie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series populares</p>
+    <div *ngFor="let mov of PopularTvShow()" class="w-full h-full">
+      <app-serie-card [data]="mov"></app-serie-card>
+    </div>
+  </section>
+
+  <section class="w-full h-full p-2 flex flex-row gap-1 overflow-x-scroll mostrador relative">
+    <p class="absolute top-0 left-0  bg-red-800 z-10 p-2 rounded-b-xl opacity-95 text-yellow-400 uppercase">Series top</p>
+    <div *ngFor="let mov of TopRatedTvShow()" class="w-full h-full">
+      <app-serie-card [data]="mov"></app-serie-card>
+    </div>
+  </section>
+
+</div>
