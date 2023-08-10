@@ -21,8 +21,12 @@ export class MoviebdService {
     return this.http.get<MovieResponse>(`${this.baseUrl}/search/movie?query=${query}&page=${page}&api_key=${this.api_key}&language=${this.language}`);
   }
 
+  getMovieById(id:string):Observable<Movie>{
+    return this.http.get<Movie>(`${this.baseUrl}/movie/${id}?&api_key=${this.api_key}&language=${this.language}`);
+  }
+
   getMoviesNowPLaying():Observable<Movie[]>{
-    return this.http.get<MovieResponse>(`${this.baseUrl}//movie/now_playing?api_key=${this.api_key}&language=${this.language}`)
+    return this.http.get<MovieResponse>(`${this.baseUrl}/movie/now_playing?api_key=${this.api_key}&language=${this.language}`)
     .pipe(map(result=>result.results as Movie[]))
   }
 
@@ -45,6 +49,10 @@ export class MoviebdService {
 
   getTvShowsByQuery(query:string, page:number=1):Observable<SeriesResponse>{
     return this.http.get<SeriesResponse>(`${this.baseUrl}/search/tv?query=${query}&page=${page}&api_key=${this.api_key}&language=${this.language}`);
+  }
+
+  getTvShowById(id:string):Observable<Serie>{
+    return this.http.get<Serie>(`${this.baseUrl}/tv/${id}?&api_key=${this.api_key}&language=${this.language}`);
   }
 
   getAiringTodayTvShow():Observable<Serie[]>{
